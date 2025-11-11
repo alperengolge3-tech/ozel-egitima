@@ -1,0 +1,256 @@
+/* Temel Stiller ve Resetleme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar (Navigasyon Menüsü) */
+.navbar {
+    background-color: #005a9c; /* Koyu mavi */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* Hero (Ana Sayfa Başlığı) */
+.hero {
+    background-color: #007bff; /* Canlı mavi */
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Ana İçerik ve Kartlar (Ana Sayfa) */
+main {
+    padding: 2.5rem 0;
+}
+
+/* Ana Bölüm Başlıkları (h2) */
+#ana-konular h2 {
+    font-size: 2rem;
+    color: #005a9c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Konular Sayfası Stilleri (konular.html) */
+#detayli-konular h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #005a9c;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem; /* Kartlarla araya boşluk koyar */
+    border-top: 2px solid #ddd;
+    padding-top: 2rem;
+}
+
+.quick-nav {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2.5rem;
+}
+
+.quick-nav h3 {
+    font-size: 1.5rem;
+    color: #005a9c;
+    margin-bottom: 1rem;
+}
+
+.quick-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+}
+
+.quick-nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.quick-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    /* Bu, ana sarmalayıcı bölüm için */
+    padding-top: 20px;
+    /* Scroll-margin-top, navbar'ın içeriğin üstünü kapatmasını engeller */
+    scroll-margin-top: 80px; 
+}
+
+.content-section-inner {
+    /* Bu, her bir alt içerik bölümü için */
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    scroll-margin-top: 100px; 
+}
+
+.content-section-inner h2 {
+    font-size: 2rem;
+    color: #005a9c;
+    text-align: left;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+}
+
+.content-section-inner h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-section-inner p, .content-section-inner ul {
+    margin-bottom: 1rem;
+}
+
+.content-section-inner ul {
+    margin-left: 20px;
+}
+
+.content-section-inner ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer (Alt Bilgi) */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #343a40;
+    color: #f8f9fa;
+    margin-top: 2rem;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        margin-top: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    #detayli-konular h1 {
+        font-size: 2rem;
+    }
+
+    .content-section-inner h2 {
+        font-size: 1.7rem;
+    }
+}
